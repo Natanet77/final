@@ -36,7 +36,7 @@ const FIELD_NAME = {
   EMAIL: "email",
   PASSWORD: "password",
   PASSWORD_AGAIN: "passwordAgain",
-  ROLE: "role",
+  // ROLE: "role",
   IS_CONFIRM: "isConfirm",
 };
 const FIELD_ERROR = {
@@ -47,7 +47,7 @@ const FIELD_ERROR = {
     "Пароль повинен складатися з не менше ніж 8 символів, включаючи хоча б одну цифру, велику та малу літери",
   PASSWORD_AGAIN: "Ваш другий пароль не збігається з першим",
   NOT_CONFIRM: "Ви не погоджуєтеся з правилами",
-  ROLE: "Ви не обрали роль",
+  // ROLE: "Ви не обрали роль",
 };
 
 export const validate = (name: string, value: string) => {
@@ -125,7 +125,6 @@ export default function Container() {
     } else {
       setError(name, null);
       delete (error as any)[name];
-      //   delete error[name];
     }
 
     checkDisabled(name);
