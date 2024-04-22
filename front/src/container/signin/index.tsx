@@ -51,11 +51,11 @@ export const validate = (name: string, value: string) => {
     }
   }
 
-  if (name === FIELD_NAME.PASSWORD) {
-    if (!REG_EXP_PASSWORD.test(String(value))) {
-      return FIELD_ERROR.PASSWORD;
-    }
-  }
+  // if (name === FIELD_NAME.PASSWORD) {
+  //   if (!REG_EXP_PASSWORD.test(String(value))) {
+  //     return FIELD_ERROR.PASSWORD;
+  //   }
+  // }
 };
 
 // export const REG_EXP_EMAIL = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$/);
