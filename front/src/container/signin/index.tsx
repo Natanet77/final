@@ -116,7 +116,6 @@ export default function Container() {
     } else {
       setError(name, null);
       delete (error as any)[name];
-      //   delete error[name];
     }
 
     checkDisabled(name);
@@ -168,13 +167,12 @@ export default function Container() {
           dispatch({ type: REQUEST_ACTION_TYPE.RESET });
           setAlert(REQUEST_ACTION_TYPE.SUCCESS, data.message);
           console.log("data.session", data.session);
-
+          <Navigate to="/balance" replace />;
           if (authCont) {
             authCont.authDispatch({
               type: AUTH_ACTION_TYPE.LOGIN,
               payload: data.session,
             });
-            <Navigate to="/balance" replace />;
           }
         } else {
           dispatch({ type: REQUEST_ACTION_TYPE.ERROR, payload: data.message });

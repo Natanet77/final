@@ -1,6 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import React, { useReducer } from "react";
-import WellcomePage from "./container/welcome";
+import WelcomePage from "./container/welcome";
 
 import SignupPage from "./container/signup";
 import SignupConfirmPage from "./container/signup-confirm";
@@ -116,7 +116,7 @@ function App() {
             index
             element={
               <AuthRoute>
-                <WellcomePage />
+                <WelcomePage />
               </AuthRoute>
             }
           />
