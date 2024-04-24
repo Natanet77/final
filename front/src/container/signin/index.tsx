@@ -10,14 +10,14 @@ import {
   requestInitialState,
   REQUEST_ACTION_TYPE,
 } from "../../util/request";
-import {
-  BrowserRouter,
-  Navigate,
-  Route,
-  Routes,
-  useNavigate,
-  useParams,
-} from "react-router-dom";
+// import {
+//   BrowserRouter,
+//   Navigate,
+//   Route,
+//   Routes,
+//   useNavigate,
+//   useParams,
+// } from "react-router-dom";
 import { AuthContext, AUTH_ACTION_TYPE, AuthRoute } from "../../App";
 import { setError, setAlert, REG_EXP_EMAIL, REG_EXP_PASSWORD } from "../signup";
 
@@ -167,7 +167,7 @@ export default function Container() {
           dispatch({ type: REQUEST_ACTION_TYPE.RESET });
           setAlert(REQUEST_ACTION_TYPE.SUCCESS, data.message);
           console.log("data.session", data.session);
-          <Navigate to="/balance" replace />;
+          // <Navigate to="/balance" replace />;
           if (authCont) {
             authCont.authDispatch({
               type: AUTH_ACTION_TYPE.LOGIN,
