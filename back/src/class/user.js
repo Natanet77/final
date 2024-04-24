@@ -6,8 +6,8 @@ class User {
   constructor({ email, password }) {
     this.id = User.#count++
 
-    // this.email = String(email).toLowerCase()
-    this.email = email
+    this.email = String(email).toLowerCase()
+    // this.email = email
     this.password = String(password)
     // this.role = User.#convertRole(role)
     this.isConfirm = false
